@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed = 55f;
 	private int score = 0;
+	public int health = 5;
 
 	// Use this for initialization
 	void Start () {
