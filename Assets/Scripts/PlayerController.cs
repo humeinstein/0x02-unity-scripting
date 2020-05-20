@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
 	public Rigidbody rb;
 
-	public float speed = 50f;
+	public float speed = 55f;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+	//Console.print("Gothere")
          	if (Input.GetKey(KeyCode.A))
              		rb.AddForce(Vector3.left * speed);
          	if (Input.GetKey(KeyCode.D))
