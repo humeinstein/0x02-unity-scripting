@@ -23,13 +23,13 @@ public class PlayerController : MonoBehaviour {
 			this.score += 1;
 			Debug.Log("Score: " + score);
 			Destroy(other.gameObject);
-
-	
-		if (other.tag == "Trap") {
+		}
+		else if (other.tag == "Trap") {
 			this.health -= 1;
 			Debug.Log("Health: " + health);
-			
-						
+		}
+		else if (other.tag == "Goal") {
+				Debug.Log("You win!");
 		}
 
 		}
@@ -48,5 +48,10 @@ public class PlayerController : MonoBehaviour {
          	if (Input.GetKey(KeyCode.S))
              		rb.AddForce(Vector3.forward * -speed);
 		
+	}
+
+	void Update() {
+		if (this.heatlh == 0)
+			SceneManager.LoadScene(SceneManager.GetActiveScene(maze));
 	}
 }
