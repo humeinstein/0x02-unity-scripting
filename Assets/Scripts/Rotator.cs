@@ -6,12 +6,13 @@ public class Rotator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//time delta
+		transform.Rotate(new Vector3(45f, 0f, 0f) * Time.deltaTime); 
 
 	}
 }

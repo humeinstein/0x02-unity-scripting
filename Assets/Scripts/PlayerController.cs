@@ -7,12 +7,24 @@ public class PlayerController : MonoBehaviour {
 	public Rigidbody rb;
 
 	public float speed = 55f;
+	private int score = 0;
 
 	// Use this for initialization
 	void Start () {
 
 	}
 	
+	//onTriggerEnter (
+		// incremenet val of score when player Pickup()
+	//)
+	void OnTriggerEnter(Collider other) {
+		if (other.tag == "Pickup") {
+			this.score += 1;
+			Debug.Log("Score: " + score);
+			Destroy(other.gameObject);
+		}
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
 
